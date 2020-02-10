@@ -1,17 +1,25 @@
-import { TODO } from '../redux/todos/types'
-import { removeTodo } from '../redux'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-const TodoItem: React.FC<TODO> = ({ text, completed, id }) => {
+import { removeTodo, toggleFinished } from '../redux'
+import { TODO } from '../redux/todos/types'
+
+const TodoItem: React.FC<TODO> = ({ text, finished, id }) => {
   const dispatch = useDispatch()
 
-  const onRemove = () => {
+  const [isChecked, toggleChecked] = useState(finished)
+
+  const onRemove: VoidFunction = () => {
     dispatch(removeTodo(id))
+  }
+  const onToggle: VoidFunction = () => {
+    toggleChecked(!isChecked)
+    dispatch(toggleFinished(id))
   }
 
   return (
     <div>
-      <input type="checkbox" name="completed"></input>
+      <input type="checkbox" checked={isChecked} onChange={onToggle}></input>
       <span>{text}</span>
       <button onClick={onRemove}>-</button>
     </div>

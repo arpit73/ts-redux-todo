@@ -1,8 +1,8 @@
-import { useState, FormEvent, ChangeEvent } from 'react'
+import { ChangeEvent, FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { addTodo } from '../redux/index'
 import uuid from '../lib/uuid'
+import { addTodo } from '../redux/index'
 import { TODO } from '../redux/todos/types'
 
 const TodoAdd: React.FC = () => {
@@ -18,7 +18,7 @@ const TodoAdd: React.FC = () => {
 
     const payload: TODO = {
       text: value,
-      completed: false,
+      finished: false,
       id: uuid()
     }
 

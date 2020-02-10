@@ -2,7 +2,7 @@ import { ActionTypes } from './todoActionTypes'
 
 export interface TODO {
   readonly text: string
-  readonly completed: boolean
+  readonly finished: boolean
   readonly id: string
 }
 

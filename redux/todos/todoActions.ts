@@ -1,5 +1,5 @@
-import { TODO, AddTodo, RemoveTodo, ToggleFinished } from './types'
 import { ActionTypes } from './todoActionTypes'
+import { AddTodo, RemoveTodo, TODO, ToggleFinished } from './types'
 
 export const addTodo = (todo: TODO): AddTodo => ({
   type: ActionTypes.ADD_TODO,

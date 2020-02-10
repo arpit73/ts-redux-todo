@@ -1,7 +1,7 @@
-import { State, TodoActions, TODO } from './types'
 import { ActionTypes } from './todoActionTypes'
+import { State, TodoActions } from './types'
 
-const initState: State = [{ text: 'abc', completed: false, id: 'id' }]
+const initState: State = [{ text: 'abc', finished: false, id: 'id' }]
 
 const todoReducer = (state: State = initState, action: TodoActions): State => {
   switch (action.type) {
@@ -16,7 +16,7 @@ const todoReducer = (state: State = initState, action: TodoActions): State => {
         todo.id === action.payload
           ? {
               ...todo,
-              completed: !todo.completed
+              finished: !todo.finished
             }
           : todo
       )
