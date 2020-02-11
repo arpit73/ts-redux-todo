@@ -11,7 +11,7 @@ const TodoAdd: React.FC = () => {
 
   const onFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const value = event.currentTarget.addTodo.value.trim()
+    const value = todoText.trim()
     if (!value) {
       return
     }
