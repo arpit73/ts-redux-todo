@@ -16,11 +16,7 @@ const TodoAdd: React.FC = () => {
       return
     }
 
-    const payload: TODO = {
-      text: value,
-      finished: false,
-      id: uuid()
-    }
+    const payload: TODO = { text: value, finished: false, id: uuid() }
 
     dispatch(addTodo(payload))
     setTodoText('')

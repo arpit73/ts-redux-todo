@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "TodoApp",
   "version": "1.0.0",
-  "description": "Necessary folder structure and dependencies for a project",
+  "description": "A simple todo app with redux and typescript",
   "main": "index.js",
   "author": "Arpit Bharti<arpitbharti73@gmail.com>",
   "license": "Apache-2.0",
