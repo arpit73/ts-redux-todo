@@ -4,8 +4,8 @@
   "description": "A simple todo app with redux and typescript",
   "main": "index.js",
   "author": "Arpit Bharti<arpitbharti73@gmail.com>",
-"repository": "https://github.com/arpit73/ts-redux-todo",
-"license": "Apache-2.0",
+  "repository": "https://github.com/arpit73/ts-redux-todo",
+  "license": "Apache-2.0",
   "keywords": [
     "next",
     "react",
